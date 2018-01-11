@@ -93,13 +93,13 @@
 <meta property="og:site_name" content="See!">
 <meta property="og:description" content="这一篇记录了我搭建个人博客的过程，参考并整理多个博客的内容，结合自己的经验，把过程陈述如下。 准备 拥有一个 GitHub 账户，如果没有的话请移步 GitHub官网 注册。 然后新建一个仓库 New repository ，仓库名为 你的用户名.github.io （”你的用户名”即为你自己的 GitHub 用户名，比如我的用户名为 v3887023 ，则我的仓库名命名为 v3887023.g">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2018/01/11/images/folders.png">
-<meta property="og:image" content="http://yoursite.com/2018/01/11/images/github_repo_url.png">
+<meta property="og:image" content="file:///F:/blog/source/images/folders.png?lastModify=1515666425">
+<meta property="og:image" content="file:///F:/blog/source/images/github_repo_url.png">
 <meta property="og:updated_time" content="2018-01-11T10:25:33.906Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo + GitHub 搭建个人博客">
 <meta name="twitter:description" content="这一篇记录了我搭建个人博客的过程，参考并整理多个博客的内容，结合自己的经验，把过程陈述如下。 准备 拥有一个 GitHub 账户，如果没有的话请移步 GitHub官网 注册。 然后新建一个仓库 New repository ，仓库名为 你的用户名.github.io （”你的用户名”即为你自己的 GitHub 用户名，比如我的用户名为 v3887023 ，则我的仓库名命名为 v3887023.g">
-<meta name="twitter:image" content="http://yoursite.com/2018/01/11/images/folders.png">
+<meta name="twitter:image" content="file:///F:/blog/source/images/folders.png?lastModify=1515666425">
 
 
 
@@ -403,15 +403,12 @@
 <p>注意：<code>yourFolder</code> 即为你的博客的目录，使用上面的代码初始化时，该目录如果存在，则会出错，如果不存在，则会新建一个目录，然后进行一系列的初始化操作。</p>
 </blockquote>
 </li>
-</ol>
-<ol>
-<li>初始化后的目录大致是这样的：（如下图）<br>其中， <code>source\_posts</code> 文件夹里面会自动生成一个 <code>hello-world.md</code> 文件，而且 <code>themes</code> 文件夹中有默认的主题 <code>landscape</code> 。</li>
-</ol>
-<p><img src="..\images\folders.png" alt=""></p>
-<ol>
-<li>输入 <code>hexo server</code>  或 <code>hexo s</code> ，完成后在浏览器输入 <code>http://localhost:4000/</code> 即可看到带有默认主题的默认网页了。不过，到目前为止，它只能在本地查看，可以把它当作发布前的预览。</li>
-</ol>
-<ol>
+<li><p>初始化后的目录大致是这样的：（如下图）</p>
+<p>其中， <code>source\_posts</code> 文件夹里面会自动生成一个 <code>hello-world.md</code> 文件，而且 <code>themes</code> 文件夹中有默认的主题 <code>landscape</code> 。</p>
+<p><img src="file:///F:/blog/source/images/folders.png?lastModify=1515666425" alt="img"></p>
+</li>
+<li><p>输入 <code>hexo server</code>  或 <code>hexo s</code> ，完成后在浏览器输入 <code>http://localhost:4000/</code> 即可看到带有默认主题的默认网页了。不过，到目前为止，它只能在本地查看，可以把它当作发布前的预览。</p>
+</li>
 <li><p>输入 <code>hexo server</code>  或 <code>hexo s</code> ，完成后在浏览器输入 <code>http://localhost:4000/</code> 即可看到带有默认主题的默认网页了。不过，到目前为止，它只能在本地查看，可以把它当作发布前的预览。</p>
 </li>
 <li><p>默认主题说实话真不好看，我选择的是 <code>nexT</code> 主题。GitHub 上面也有其他主题可供选择。</p>
@@ -424,27 +421,24 @@
 <blockquote>
 <p>注意：属性和值之间要空一格，属性前面不能有空格，否则会出错（个人经验，有错的话请提出）</p>
 </blockquote>
+<p>​</p>
 </li>
-</ol>
-<ol>
 <li><p>还是在配置文件中，把 <code>Deployment</code> 那一项的 <code>deploy</code> 属性做一下填写，就可以将博客的网页上传到 GitHub 了。</p>
 <p>代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">  ## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">  deploy:</span><br><span class="line">    type: git</span><br><span class="line">    repo: 你的 GitHub 仓库地址，比如我的是 https://github.com/v3887023/v3887023.github.io.git</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
-<p>​</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">   ## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">   deploy:</span><br><span class="line">     type: git</span><br><span class="line">     repo: 你的 GitHub 仓库地址，比如我的是 https://github.com/v3887023/v3887023.github.io.git</span><br><span class="line">     branch: master</span><br></pre></td></tr></table></figure>
 <p>​</p>
 </li>
 <li><p>仓库地址（HTTPS 或 SSH）可以通过仓库里面的 <code>Clone or download</code> 按钮获得，如图：</p>
+<p>​</p>
+<p><img src="file:///F:/blog/source/images/github_repo_url.png" alt="img"></p>
 </li>
-</ol>
-<p><img src="..\images\github_repo_url.png" alt=""></p>
-<ol>
 <li><p>输入 <code>hexo g</code> 或 <code>hexo generate</code> 生成网站的静态文件，完成后会看到根目录多出了一个 <code>public</code> 文件夹。</p>
 <p>开始部署前，先输入以下代码，安装部署网站需要的插件：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>​</p>
 </li>
-</ol>
-<ol>
-<li>然后输入 <code>hexo deploy</code> 或 <code>hexo d</code> 部署网页，Hexo 会自动把 <code>public</code> 文件夹里面的文件推到 GitHub 上面。这样一来，就成功把网页部署在 GitHub 上面了，此时，可以通过访问 <code>https://你的仓库名/</code> （比如我的 <code>https:/v3887023.github.io/</code> ）看到 Hexo 自动生成的 <code>hello-world.md</code> 在你的博客上面的展示了。</li>
+<li><p>然后输入 <code>hexo deploy</code> 或 <code>hexo d</code> 部署网页，Hexo 会自动把 <code>public</code> 文件夹里面的文件推到 GitHub 上面。这样一来，就成功把网页部署在 GitHub 上面了，此时，可以通过访问 <code>https://你的仓库名/</code> （比如我的 <code>https:/v3887023.github.io/</code> ）看到 Hexo 自动生成的 <code>hello-world.md</code> 在你的博客上面的展示了。</p>
+</li>
 </ol>
 
       
