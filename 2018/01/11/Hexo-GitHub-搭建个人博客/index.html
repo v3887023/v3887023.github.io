@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="笔记," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="这一篇记录了我搭建个人博客的过程，参考并整理多个博客的内容，结合自己的经验，把过程陈述如下。 准备` 拥有一个 GitHub 账户，如果没有的话请移步 GitHub官网 注册。 然后新建一个仓库 New repository ，仓库名为 你的用户名.github.io （”你的用户名”即为你自己的 GitHub 用户名，比如我的用户名为 v3887023 ，则我的仓库名命名为 v3887023.">
+<meta name="keywords" content="笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo + GitHub 搭建个人博客">
+<meta property="og:url" content="http://yoursite.com/2018/01/11/Hexo-GitHub-搭建个人博客/index.html">
+<meta property="og:site_name" content="See!">
+<meta property="og:description" content="这一篇记录了我搭建个人博客的过程，参考并整理多个博客的内容，结合自己的经验，把过程陈述如下。 准备` 拥有一个 GitHub 账户，如果没有的话请移步 GitHub官网 注册。 然后新建一个仓库 New repository ，仓库名为 你的用户名.github.io （”你的用户名”即为你自己的 GitHub 用户名，比如我的用户名为 v3887023 ，则我的仓库名命名为 v3887023.">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2018/01/11/images/folders.png">
+<meta property="og:image" content="http://yoursite.com/2018/01/11/images/github_repo_url.png">
+<meta property="og:updated_time" content="2018-01-11T04:31:27.193Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo + GitHub 搭建个人博客">
+<meta name="twitter:description" content="这一篇记录了我搭建个人博客的过程，参考并整理多个博客的内容，结合自己的经验，把过程陈述如下。 准备` 拥有一个 GitHub 账户，如果没有的话请移步 GitHub官网 注册。 然后新建一个仓库 New repository ，仓库名为 你的用户名.github.io （”你的用户名”即为你自己的 GitHub 用户名，比如我的用户名为 v3887023 ，则我的仓库名命名为 v3887023.">
+<meta name="twitter:image" content="http://yoursite.com/2018/01/11/images/folders.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/01/11/Hexo-GitHub-搭建个人博客/"/>
+
+
+
+
+
+  <title>Hexo + GitHub 搭建个人博客 | See!</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">See!</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">What I can do</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/11/Hexo-GitHub-搭建个人博客/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Victor">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="See!">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Hexo + GitHub 搭建个人博客</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-11T00:16:58+08:00">
+                2018-01-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/01/11/Hexo-GitHub-搭建个人博客/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/01/11/Hexo-GitHub-搭建个人博客/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  653
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <hr>
+<h4 id="这一篇记录了我搭建个人博客的过程，参考并整理多个博客的内容，结合自己的经验，把过程陈述如下。"><a href="#这一篇记录了我搭建个人博客的过程，参考并整理多个博客的内容，结合自己的经验，把过程陈述如下。" class="headerlink" title="这一篇记录了我搭建个人博客的过程，参考并整理多个博客的内容，结合自己的经验，把过程陈述如下。"></a>这一篇记录了我搭建个人博客的过程，参考并整理多个博客的内容，结合自己的经验，把过程陈述如下。</h4><hr>
+<h3 id="准备"><a href="#准备" class="headerlink" title="准备`"></a>准备`</h3><ol>
+<li><p>拥有一个 GitHub 账户，如果没有的话请移步 <a href="https://github.com/" target="_blank" rel="noopener">GitHub官网</a> 注册。</p>
+<p>然后新建一个仓库 <code>New repository</code> ，仓库名为 <code>你的用户名.github.io</code> （”你的用户名”即为你自己的 GitHub 用户名，比如我的用户名为 <code>v3887023</code> ，则我的仓库名命名为 <code>v3887023.github.io</code> ）。</p>
+</li>
+<li><p>安装 <a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a></p>
+</li>
+<li><p>安装 <a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git</a></p>
+</li>
+</ol>
+<h3 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a><code>安装 Hexo</code></h3><ol>
+<li><p>打开 <code>CMD</code> ，输入下面代码即可安装 Hexo</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>然后，选定好博客框架的放置目录，输入下面代码即可初始化框架</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;yourFolder&gt;</span><br><span class="line">$ cd &lt;yourFolder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：<code>yourFolder</code> 即为你的博客的目录，使用上面的代码初始化时，该目录如果存在，则会出错，如果不存在，则会新建一个目录，然后进行一系列的初始化操作。</p>
+</blockquote>
+<p>​</p>
+</li>
+<li><p>初始化后的目录大致是这样的：（如下图）</p>
+<p>其中， <code>source\_posts</code> 文件夹里面会自动生成一个 <code>hello-world.md</code> 文件，而且 <code>themes</code> 文件夹中有默认的主题 <code>landscape</code> 。</p>
+</li>
+</ol>
+<p><img src="..\images\folders.png" alt=""></p>
+<ol>
+<li>输入 <code>hexo server</code>  或 <code>hexo s</code> ，完成后在浏览器输入 <code>http://localhost:4000/</code> 即可看到带有默认主题的默认网页了。不过，到目前为止，它只能在本地查看，可以把它当作发布前的预览。</li>
+</ol>
+<ol>
+<li><p>默认主题说实话真不好看，我选择的是 <code>nexT</code> 主题。GitHub 上面也有其他主题可供选择。</p>
+<p>在博客的根目录输入下面代码，会自动下载主题到 <code>themes</code> 目录 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>主题下载完成后，打开博客根目录的配置文件 <code>_config.yml</code> ，把 <code>Extension</code>  那一项的 <code>theme</code> 属性改为 <code>next</code> 即可，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
+<p>注意：属性和值之间要空一格，属性前面不能有空格，否则会出错（个人经验，有错的话请提出）</p>
+</li>
+</ol>
+<ol>
+<li><p>还是在配置文件中，把 <code>Deployment</code> 那一项的 <code>deploy</code> 属性做一下填写，就可以将博客的网页上传到 GitHub 了。</p>
+<p>代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: 你的 GitHub 仓库地址，比如我的是 https://github.com/v3887023/v3887023.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>仓库地址（HTTPS 或 SSH）可以通过仓库里面的 <code>Clone or download</code> 按钮获得，如图：</p>
+<p><img src="..\images\github_repo_url.png" alt=""></p>
+</li>
+</ol>
+<ol>
+<li>输入 <code>hexo g</code> 或 <code>hexo generate</code> 生成网站的静态文件</li>
+</ol>
+
+      
+    </div>
+    <div>
+  	
+  	  ﻿<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束-------------</div>
+    
+</div>
+  	
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/笔记/" rel="tag"><i class="fa fa-tag"></i> 笔记</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="hypercomments_widget"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Victor</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#这一篇记录了我搭建个人博客的过程，参考并整理多个博客的内容，结合自己的经验，把过程陈述如下。"><span class="nav-number">1.</span> <span class="nav-text"><a href="#&#x8FD9;&#x4E00;&#x7BC7;&#x8BB0;&#x5F55;&#x4E86;&#x6211;&#x642D;&#x5EFA;&#x4E2A;&#x4EBA;&#x535A;&#x5BA2;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x53C2;&#x8003;&#x5E76;&#x6574;&#x7406;&#x591A;&#x4E2A;&#x535A;&#x5BA2;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x7ED3;&#x5408;&#x81EA;&#x5DF1;&#x7684;&#x7ECF;&#x9A8C;&#xFF0C;&#x628A;&#x8FC7;&#x7A0B;&#x9648;&#x8FF0;&#x5982;&#x4E0B;&#x3002;" class="headerlink" title="&#x8FD9;&#x4E00;&#x7BC7;&#x8BB0;&#x5F55;&#x4E86;&#x6211;&#x642D;&#x5EFA;&#x4E2A;&#x4EBA;&#x535A;&#x5BA2;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x53C2;&#x8003;&#x5E76;&#x6574;&#x7406;&#x591A;&#x4E2A;&#x535A;&#x5BA2;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x7ED3;&#x5408;&#x81EA;&#x5DF1;&#x7684;&#x7ECF;&#x9A8C;&#xFF0C;&#x628A;&#x8FC7;&#x7A0B;&#x9648;&#x8FF0;&#x5982;&#x4E0B;&#x3002;"></a>&#x8FD9;&#x4E00;&#x7BC7;&#x8BB0;&#x5F55;&#x4E86;&#x6211;&#x642D;&#x5EFA;&#x4E2A;&#x4EBA;&#x535A;&#x5BA2;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x53C2;&#x8003;&#x5E76;&#x6574;&#x7406;&#x591A;&#x4E2A;&#x535A;&#x5BA2;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x7ED3;&#x5408;&#x81EA;&#x5DF1;&#x7684;&#x7ECF;&#x9A8C;&#xFF0C;&#x628A;&#x8FC7;&#x7A0B;&#x9648;&#x8FF0;&#x5982;&#x4E0B;&#x3002;</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#准备"><span class="nav-number"></span> <span class="nav-text"><a href="#&#x51C6;&#x5907;" class="headerlink" title="&#x51C6;&#x5907;`"></a>&#x51C6;&#x5907;`</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-Hexo"><span class="nav-number"></span> <span class="nav-text"><a href="#&#x5B89;&#x88C5;-Hexo" class="headerlink" title="&#x5B89;&#x88C5; Hexo"></a><code>&#x5B89;&#x88C5; Hexo</code></span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        ﻿<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Victor</span>
+
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  访问次数: <span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+		<script type="text/javascript">
+		_hcwp = window._hcwp || [];
+
+		_hcwp.push({widget:"Bloggerstream", widget_id: 99652, selector:".hc-comment-count", label: "{\%COUNT%\}" });
+
+		
+		_hcwp.push({widget:"Stream", widget_id: 99652, xid: "2018/01/11/Hexo-GitHub-搭建个人博客/"});
+		
+
+		(function() {
+		if("HC_LOAD_INIT" in window)return;
+		HC_LOAD_INIT = true;
+		/* var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase(); */
+		var hcc = document.createElement("script"); hcc.type = "text/javascript"; hcc.async = true;
+		hcc.src = ("https:" == document.location.protocol ? "https" : "http")+"://w.hypercomments.com/widget/hc/99652/"+"en"+"/widget.js";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hcc, s.nextSibling);
+		})();
+		</script>
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
