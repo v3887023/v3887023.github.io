@@ -42,7 +42,7 @@
 </li>
 <li><p>输入 <code>hexo server</code>  或 <code>hexo s</code> ，完成后在浏览器输入 <code>http://localhost:4000/</code> 即可看到带有默认主题的默认网页了。不过，到目前为止，它只能在本地查看，可以把它当作发布前的预览。</p>
 <p>打开网页后大概是这样的：</p>
-<center><img src="/pic/website.png" alt=""></center>
+<center><img src="/pic/website.png" alt="网页样例"></center>
 
 <p>​</p>
 </li>
