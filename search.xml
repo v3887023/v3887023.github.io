@@ -6,7 +6,8 @@
       <title><![CDATA[Hexo + GitHub 搭建个人博客]]></title>
       <url>/2018/01/11/Hexo-GitHub-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
       <content type="html"><![CDATA[<hr>
-<p><img src="\pic\sunshine.jpg" alt="配图"></p>
+<center><img src="\pic\sunshine.jpg" alt="配图"></center>
+
 <p>这一篇记录了我搭建个人博客的过程，参考并整理多个博客的内容，结合自己的经验，把过程陈述如下。</p>
 <a id="more"></a>
 <hr>
@@ -32,7 +33,8 @@
 <p>​</p>
 </li>
 <li><p>初始化后的目录大致是这样的：（如下图）</p>
-<p><img src="/pic/folders.png" alt="文件目录概况"></p>
+<center><img src="/pic/folders.png" alt="文件目录概况"></center>
+
 <blockquote>
 <p>其中， <code>source\_posts</code> 文件夹里面会自动生成一个 <code>hello-world.md</code> 文件， <code>themes</code> 文件夹中有默认的主题 <code>landscape</code> 。</p>
 </blockquote>
@@ -40,7 +42,8 @@
 </li>
 <li><p>输入 <code>hexo server</code>  或 <code>hexo s</code> ，完成后在浏览器输入 <code>http://localhost:4000/</code> 即可看到带有默认主题的默认网页了。不过，到目前为止，它只能在本地查看，可以把它当作发布前的预览。</p>
 <p>打开网页后大概是这样的：</p>
-<p><img src="/pic/website.png" alt=""></p>
+<center><img src="/pic/website.png" alt=""></center>
+
 <p>​</p>
 </li>
 <li><p>默认主题说实话真不好看，我选择的是 <code>nexT</code> 主题。GitHub 上面也有其他主题可供选择。</p>
