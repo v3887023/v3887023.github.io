@@ -64,7 +64,8 @@
 <p>​</p>
 </li>
 <li><p>仓库地址（HTTPS 或 SSH）可以通过仓库里面的 <code>Clone or download</code> 按钮获he得，如图：​</p>
-<p><img src="/pic/github_repo_url.png" alt="GitHub仓库地址"></p>
+<center><img src="/pic/github_repo_url.png" alt="GitHub仓库地址"></center>
+
 <p>​</p>
 </li>
 <li><p>输入 <code>hexo g</code> 或 <code>hexo generate</code> 生成网站的静态文件，完成后会看到根目录多出了一个 <code>public</code> 文件夹。</p>
