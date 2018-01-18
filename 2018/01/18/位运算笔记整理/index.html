@@ -13,18 +13,23 @@
     
     
     
-    <title>归档: 2018 | See! | What I can do</title>
+    <title>位运算笔记整理 | See! | What I can do</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     
-    <meta name="keywords" content="">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="See!">
-<meta property="og:url" content="https://v3887023.github.io/archives/2018/index.html">
+    <meta name="keywords" content="位运算">
+    <meta name="description" content="下面整理了一些位运算的用法。">
+<meta name="keywords" content="位运算">
+<meta property="og:type" content="article">
+<meta property="og:title" content="位运算笔记整理">
+<meta property="og:url" content="https://v3887023.github.io/2018/01/18/位运算笔记整理/index.html">
 <meta property="og:site_name" content="See!">
+<meta property="og:description" content="下面整理了一些位运算的用法。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-01-18T05:17:42.012Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="See!">
+<meta name="twitter:title" content="位运算笔记整理">
+<meta name="twitter:description" content="下面整理了一些位运算的用法。">
     
         <link rel="alternate" type="application/atom+xml" title="See!" href="/atom.xml">
     
@@ -40,7 +45,7 @@
 <body>
     <div id="loading" class="active"></div>
 
-    <aside id="menu"  >
+    <aside id="menu" class="hide" >
   <div class="inner flex-row-vertical">
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
@@ -66,7 +71,7 @@
               </a>
             </li>
         
-            <li class="waves-block waves-effect active">
+            <li class="waves-block waves-effect">
               <a href="/archives"  >
                 <i class="icon icon-lg icon-archives"></i>
                 归档
@@ -98,7 +103,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">归档</div>
+        <div class="flex-col header-title ellipsis">位运算笔记整理</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -113,11 +118,19 @@
         
     </div>
 </header>
-<header class="content-header archives-header">
+<header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">归档</h1>
+        <h1 class="title">位运算笔记整理</h1>
         <h5 class="subtitle">
+            
+                <time datetime="2018-01-18T05:17:41.000Z" itemprop="datePublished" class="page-time">
+  2018-01-18
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/笔记/">笔记</a></li></ul>
+
             
         </h5>
     </div>
@@ -127,83 +140,115 @@
 
 </header>
 
-<div class="container body-wrap fade">
-    
 
+<div class="container body-wrap">
     
+<article id="post-位运算笔记整理"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">位运算笔记整理</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-01-18 13:17:41" datetime="2018-01-18T05:17:41.000Z"  itemprop="datePublished">2018-01-18</time>
+
             
-            <h3 class="archive-separator">一月, 2018</h3>
-            <div class="waterfall">
-    
-
-        <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2018-01-18 13:17:41" datetime="2018-01-18T05:17:41.000Z"  itemprop="datePublished">2018-01-18</time>
-
-      
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/笔记/">笔记</a></li></ul>
 
 
 
-    </div>
-    
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
 
 
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/01/18/位运算笔记整理/">位运算笔记整理</a>
-    </h3>
-  
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>下面整理了一些位运算的用法。</p>
+<a id="more"></a>
+<ol>
+<li><p>根据末尾数字判定 num 的奇偶</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">num &amp; <span class="number">1</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>把 num 最末位的数字强行变成 1</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">num | <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+<li><p>​</p>
+</li>
+</ol>
 
+        </div>
 
-
-    
-    <div class="post-footer">
+        <blockquote class="post-copyright">
+    <div class="content">
         
+<span class="post-time">
+    最后更新时间：<time datetime="2018-01-18T05:17:42.012Z" itemprop="dateUpdated">2018-01-18 13:17:42</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2018/01/18/位运算笔记整理/" target="_blank" rel="external">https://v3887023.github.io/2018/01/18/位运算笔记整理/</a>
+        
+    </div>
+    <footer>
+        <a href="https://v3887023.github.io">
+            <img src="/favicon.ico" alt="Victor">
+            Victor
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
 	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/位运算/">位运算</a></li></ul>
 
+
+            
+
+
+        </div>
     </div>
-    
-  </article>
-</div>
 
     
-
-        <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2018-01-11 00:16:58" datetime="2018-01-10T16:16:58.000Z"  itemprop="datePublished">2018-01-11</time>
-
-      
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/01/11/Hexo-GitHub-搭建个人博客/">Hexo + GitHub 搭建个人博客</a>
-    </h3>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GitHub/">GitHub</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/搭建博客/">搭建博客</a></li></ul>
-
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/01/11/Hexo-GitHub-搭建个人博客/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Hexo + GitHub 搭建个人博客</h4>
+      </a>
     </div>
-    
-  </article>
-</div>
+  
+</nav>
+
+
 
     
-    </div>
 
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
 </div>
 
         <footer class="footer">
