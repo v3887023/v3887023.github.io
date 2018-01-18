@@ -42,10 +42,10 @@
 <li><p>补码的正零与负零的表示方法相同</p>
 <p>​</p>
 </li>
-<li><p><code>a &lt;&lt; b</code> 相当于  $a  *  2^b$</p>
+<li><p><code>a &lt;&lt; b</code> 相当于  $ a  *  2^b $</p>
 <p>​</p>
 </li>
-<li><p><code>a &gt;&gt; b</code> 相当于  $a / 2 ^ b$ （结果取整）</p>
+<li><p><code>a &gt;&gt; b</code> 相当于  $ a  /  2 ^ b ​$ （结果取整）</p>
 </li>
 </ol>
 ]]></content>
