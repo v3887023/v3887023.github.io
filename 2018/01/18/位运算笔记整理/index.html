@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="See!">
 <meta property="og:description" content="整理了一些位运算的用法。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-01-18T06:19:07.283Z">
+<meta property="og:updated_time" content="2018-06-16T06:37:09.412Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="位运算笔记整理">
 <meta name="twitter:description" content="整理了一些位运算的用法。">
@@ -167,47 +167,32 @@
         <div class="post-content" id="post-content" itemprop="postContent">
             <p>整理了一些位运算的用法。</p>
 <a id="more"></a>
-<ol>
-<li><p>根据末尾数字判定 num 的奇偶</p>
+<p>根据末尾数字判定 num 的奇偶</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">num &amp; <span class="number">1</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>把 num 最末位的数字强行变成 1</p>
+<p>把 num 最末位的数字强行变成 1</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">num | <span class="number">1</span></span><br></pre></td></tr></table></figure>
 <p>​</p>
-</li>
-<li><p>把 num 最末位数字强行变成 0</p>
+<p>把 num 最末位数字强行变成 0</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">num | <span class="number">1</span> - <span class="number">1</span></span><br></pre></td></tr></table></figure>
 <p>​</p>
-</li>
-<li><p>两次异或同一个数，最后的结果不变，可用于简单的加密</p>
+<p>两次异或同一个数，最后的结果不变，可用于简单的加密</p>
 <p>​</p>
-</li>
-<li><p>实现 a 和 b 两个数交换</p>
+<p>实现 a 和 b 两个数交换</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = a + b</span><br><span class="line">b = a - b</span><br><span class="line">a = a - b</span><br></pre></td></tr></table></figure>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = a | b</span><br><span class="line">b = a | b</span><br><span class="line">a = a | b</span><br></pre></td></tr></table></figure>
 <p>​</p>
-</li>
-<li><p>计算机系统中，数值一律用补码来表示和存储</p>
+<p>计算机系统中，数值一律用补码来表示和存储</p>
 <p>​</p>
-</li>
-<li><p>补码和原码的相互转换的运算过程相同</p>
+<p>补码和原码的相互转换的运算过程相同</p>
 <p>​</p>
-</li>
-<li><p>一个负整数（或原码）与其补数（或补码）相加，和为模</p>
+<p>一个负整数（或原码）与其补数（或补码）相加，和为模</p>
 <p>​</p>
-</li>
-<li><p>对一个数的补码再求补码，等于它本身</p>
+<p>对一个数的补码再求补码，等于它本身</p>
 <p>​</p>
-</li>
-<li><p>补码的正零与负零的表示方法相同</p>
+<p>补码的正零与负零的表示方法相同</p>
 <p>​</p>
-</li>
-<li><p><code>a &lt;&lt; b</code> 相当于  $ a \, * \, 2^b $</p>
-<p>​</p>
-</li>
-<li><p><code>a &gt;&gt; b</code> 相当于  $ a \, / \, 2 ^ b $ （结果取整）</p>
-</li>
-</ol>
+<p><code>a &lt;&lt; b</code> 相当于  $ a \, * \, 2^b $</p>
+<p><code>a &gt;&gt; b</code> 相当于  $ a \, / \, 2 ^ b $ （结果取整）</p>
 
         </div>
 
@@ -216,7 +201,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-01-18T06:19:07.283Z" itemprop="dateUpdated">2018-01-18 14:19:07</time>
+    最后更新时间：<time datetime="2018-06-16T06:37:09.412Z" itemprop="dateUpdated">2018-06-16 14:37:09</time>
 </span><br>
 
 
