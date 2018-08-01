@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://v3887023.github.io/"/>
-  <updated>2018-06-16T12:57:17.876Z</updated>
+  <updated>2018-08-01T02:53:28.272Z</updated>
   <id>https://v3887023.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://v3887023.github.io/2018/08/01/%E4%BB%8A%E6%97%A5%E9%9A%8F%E7%AC%94/"/>
+    <id>https://v3887023.github.io/2018/08/01/今日随笔/</id>
+    <published>2018-08-01T02:57:39.070Z</published>
+    <updated>2018-08-01T02:53:28.272Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="今日随笔"><a href="#今日随笔" class="headerlink" title="今日随笔"></a>今日随笔</h1><p>​    今天，可能是比较闲的缘故，开始胡思乱想，不过主要还是关于以后的学习和工作的。</p><p>​    从开始学习 Android 到现在，也已经有一年多的时间了。想想当初从网页前端转去学习 Android，其中的原因，大部分是 Android 会相对容易一些，至少我当时是那么觉得的。当然，这其中也有着比较艰难的选择历程，最后，我还是选择了走这条路。</p><p>​    之后，一个表哥问我，有没有去关注 Android 就业形势。我说没有，然后开始去找一些招聘启事，觉得还行。而且我对 Android 的兴趣还是很浓厚的，所以没有怎么动摇。但今天，当我再次问自己这个问题时，我发现，我开始不能那么确定走这条路了，而且还开始考虑考研了。毕竟，我的水平还不够，靠 Android 吃饭我还不是很敢想。</p><p>​    随着做的小项目的增多，我越来越发现，写的代码很多都是差不多的，但是相对来说我做的不是很流畅，越发觉得那些 Android 开发者好厉害。比如说，我一直很看不起的 RAM 不到 1 GB 的 只是 Android 4.4.4 的华为手机，竟然能够很流畅的运行 ”跳舞的线” 这款游戏，这真的出乎我意料。想想，我目前的技术水平真的不值一提，唉。</p><p>​    我之前一直比较坚持不想考研，原因很多，这里也不多说。但想想，这件事还是不能草率的做决定，真的要考虑到自己的未来发展，不能囿于自己目前的狭隘视野。后面，在学业上还是要继续努力，在技术上多下功夫，大三这一年，会比前面两年更加苦更加累，要坚持，坚定自己的信念，走下去。</p><p>​    想的事情比较多，比较乱，所以写的也很乱，不过没事，这也有待提高。继续加油吧！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;今日随笔&quot;&gt;&lt;a href=&quot;#今日随笔&quot; class=&quot;headerlink&quot; title=&quot;今日随笔&quot;&gt;&lt;/a&gt;今日随笔&lt;/h1&gt;&lt;p&gt;​    今天，可能是比较闲的缘故，开始胡思乱想，不过主要还是关于以后的学习和工作的。&lt;/p&gt;
+&lt;p&gt;​    从开始学习 
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>位运算笔记整理</title>
