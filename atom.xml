@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://v3887023.github.io/"/>
-  <updated>2018-10-08T12:55:38.556Z</updated>
+  <updated>2018-10-08T12:57:17.690Z</updated>
   <id>https://v3887023.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://v3887023.github.io/2018/10/08/%E5%AF%B9-DAO-%E7%9A%84%E8%AF%AF%E8%A7%A3%E5%92%8C%E4%B8%80%E4%BA%9B%E8%AE%A4%E8%AF%86/"/>
     <id>https://v3887023.github.io/2018/10/08/对-DAO-的误解和一些认识/</id>
     <published>2018-10-08T12:55:29.000Z</published>
-    <updated>2018-10-08T12:55:38.556Z</updated>
+    <updated>2018-10-08T12:57:17.690Z</updated>
     
     <content type="html"><![CDATA[<hr><p>一直以来把 DAO 理解错了 orz</p><a id="more"></a><hr><p>​    之前，有了解到 DAO 这个词，知道他是 Data Access Object，数据库访问对象，以为就是我之前写的XxxManager，所以，当要使用数据库的时候，就直接把细节全写在一个类里面。</p><p>​    直到今天，在看了谷歌给的 Android Architecture 时，觉得他的用法很奇怪。于是再次查了一下百度和维基百科，发现我之前没有看仔细，也想错了。</p><blockquote><p>DAO (Data Access Object) 是一个数据访问接口，数据访问：顾名思义就是与数据库打交道。夹在业务逻辑与数据库资源中间</p><p>–摘自百度百科</p><p>In computer software, a data access object (DAO) is an object that provides an abstract interface to some type of database or other persistence mechanism. By mapping application calls to the persistence layer, the DAO provides some specific data operations without exposing details of the database. </p><p>–摘自维基百科</p></blockquote><p>​    其实就是把对数据库的一系列操作给抽出来，写成一个接口，隐藏了操作数据库的细节，以实现封装的效果。这样，当更换数据库或者测试时也能够很方便。</p><p>​    所以说，学习的时候还是要认真一点，不然会走歪路。还好跟紧 Google 老大的步伐，否则，可能还会一直错下去呢。</p>]]></content>
     
