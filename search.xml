@@ -3,6 +3,49 @@
   
     
     <entry>
+      <title><![CDATA[String 类]]></title>
+      <url>/2019/06/15/String-%E7%B1%BB/</url>
+      <content type="html"><![CDATA[<hr>
+<p>记录关于 String 类的一些笔记。</p>
+<a id="more"></a>
+<hr>
+<p><code>equals</code> 方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object anObject)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 如果是同一个对象，直接返回 true</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span> == anObject) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 判断比较的对象是否为 String 类型</span></span><br><span class="line">    <span class="keyword">if</span> (anObject <span class="keyword">instanceof</span> String) &#123;</span><br><span class="line">        String anotherString = (String)anObject;</span><br><span class="line">        <span class="keyword">int</span> n = length();</span><br><span class="line">        <span class="comment">// 判断两个字符串长度是否相等</span></span><br><span class="line">        <span class="keyword">if</span> (n == anotherString.length()) &#123;</span><br><span class="line">            <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">while</span> (n-- != <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="comment">// 逐个判断每个字符是否相等</span></span><br><span class="line">                <span class="keyword">if</span> (charAt(i) != anotherString.charAt(i))</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>通过源码可以看出，<code>String</code> 类重写了 <code>equals</code> 方法，比较两个 <code>String</code> 对象是否 equals 的方法也很简单，就是看它们是否是同一个对象或者他们的字符串序列完全相同。</p>
+<hr>
+<p><code>hashCode</code> 方法<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> h = hash;   <span class="comment">// hash 的值默认为空</span></span><br><span class="line">    <span class="keyword">final</span> <span class="keyword">int</span> len = length();</span><br><span class="line">    <span class="comment">// 如果 h 不为 0，即 hash 的值不为 0，说明已经计算过了 </span></span><br><span class="line">    <span class="keyword">if</span> (h == <span class="number">0</span> &amp;&amp; len &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">            h = <span class="number">31</span> * h + charAt(i);</span><br><span class="line">        &#125;</span><br><span class="line">        hash = h;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> h;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>从上面的代码可以看到几点：</p>
+<ol>
+<li>空字符串的 hashCode 为 0</li>
+<li>一个 String 对象的 hashCode 计算过一次后会保存在 hash 字段，下次要获取时直接返回</li>
+<li>对于一个字符串 s，它的 hashCode 的计算方法为<br><code>s[0] * 31^(n - 1) + s[1] * 31^(n - 2) + ... + s[n - 1]</code></li>
+</ol>
+<p>尽管如此，还是要注意，由于字符串理论上可以有无数多个，而 int 类型的 hashCode 的取值范围在 [- 2 ^ 31, 2 ^ 31 - 1]，只有 2 ^ 32 （即 4294967296）个数，肯定会发生不同的字符串却有相同的 hashCode 的情况。例如，”Aa” 和 “BB” 这两个字符串的 hashCode 都为 2112。</p>
+<p>对于这里的算法为什么采用 31 作为乘数，网上的说法也是各种各样。这里列一下觉得比较靠谱的说法：</p>
+<ol>
+<li>31是一个不大不小的质数，而且是一个奇数</li>
+<li>31可以被 JVM 优化，31 * i = (i &lt;&lt; 5) - i</li>
+</ol>
+<p>个人的猜想：<br>这样的一个算法，能够让数值均匀而又随机地分布在 hash 变量所占的 32 位空间上，因为每次会左移 5 位然后减掉当前值，这样一来这个 32 位的空间都会利用到，而且，当在需要使用 hashCode 的场景时，如 HashMap 的 hash 方法，会将高 16 位的数值与低 16 位的数值做异或运算，从而降低哈希碰撞的概率。</p>
+<hr>
+]]></content>
+      
+        <categories>
+            
+            <category> 笔记 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> String </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[LocalBroadcastManager 笔记]]></title>
       <url>/2019/06/03/LocalBroadcastManager-%E7%AC%94%E8%AE%B0/</url>
       <content type="html"><![CDATA[<hr>
